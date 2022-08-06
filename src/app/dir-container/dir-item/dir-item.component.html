@@ -1,0 +1,16 @@
+<div *ngIf="item">
+  <a [routerLink]="'/dir' + item.path"><div> <img src="{{item.picture}}" height="100" /> </div></a>
+<div> {{item.name}} </div>
+<div>  
+   <span class="pl-flag"> {{item.translation?.pl}} </span>
+   <span class="de-flag"> {{item.translation?.de}} </span> 
+   <span class="ua-flag"> {{item.translation?.ua}} </span> 
+</div>
+<button mat-icon-button class="app-header-menu-icon" [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+   </button>
+   <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="editDir(item)">Edit</button>
+    <button mat-menu-item (click)="deleteDir(item.id)">Delete</button>
+   </mat-menu>
+</div>

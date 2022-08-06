@@ -1,0 +1,13 @@
+<div>
+    Name: <input type="text" [formControl]="nameControl"/>
+    Picture: <input type="text" [formControl]="pictureControl">
+    Polish: <input type="text" [formControl]="translationPlControl">
+    German: <input type="text" [formControl]="translationDeControl">
+    Ukrainian: <input type="text" [formControl]="translationUaControl">
+</div>
+<button (click)="createDir()">
+    {{ action }}
+</button>
+<button (click)="update.emit()">
+    Cancel
+</button>

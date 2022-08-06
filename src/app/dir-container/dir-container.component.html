@@ -1,0 +1,10 @@
+<div>
+   <button (click)="addDirComponent()">+</button>
+   <a [routerLink]="parentLink"><button>..</button></a>
+</div> 
+<div *ngFor="let dirItem of dir">
+   <app-dir-item
+      [item]="dirItem"
+      (update)="updateDir()"
+   ></app-dir-item>
+</div>
